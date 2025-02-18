@@ -25,7 +25,12 @@ function App() {
 
         <div className="navbar_s3">
           <p>Courses</p>
-          <p>My Learning</p>
+          <div className="mylearning">
+            <p>My Learning</p>
+            <div className="mylearning_popup">
+              <p>You did not purchase anything yet!!</p>
+            </div>
+          </div>
           <ShoppingCartIcon />
           <NotificationsActiveIcon />
           <Person2Icon />
@@ -41,6 +46,13 @@ function App() {
       </div>
       <div className="section_image">
         <img src={section_image} alt="sale_image"></img>
+        <div className="sale_image">
+          <h1>Udemy Flash Sale! 24 Hours to Save.</h1>
+          <p>
+            Get the top Courses for just 499.Just one day to save but a lifetime
+            to learn
+          </p>
+        </div>
       </div>
       <div className="recommended">
         <h1 className="recommended_title">Recommended For You</h1>
@@ -186,28 +198,27 @@ function App() {
         </div>
       </div>
       <div className="footer">
-<div className="footer_one">
-<div className="footer_one_s1"> 
-<p>Udemy Businees</p>
-<p>Teach on Udemy</p>
-<p>Get the App</p>
-<p>about</p>
-<p>Contact Us</p>
-</div>
-<div className="footer_one_s2">
-<p>Careers</p>
-<p>Blog</p>
-<p>Help and Support</p>
-<p>Affilates</p>
-<p>Investors</p>
+        <div className="footer_one">
+          <div className="footer_one_s1">
+            <p>Udemy Businees</p>
+            <p>Teach on Udemy</p>
+            <p>Get the App</p>
+            <p>about</p>
+            <p>Contact Us</p>
+          </div>
+          <div className="footer_one_s2">
+            <p>Careers</p>
+            <p>Blog</p>
+            <p>Help and Support</p>
+            <p>Affilates</p>
+            <p>Investors</p>
+          </div>
+        </div>
 
-</div>
-</div>
-     
-      <div className="footer_two">
-<h1>Udemy</h1>
-<p>&copy; Udemy, Inc</p>
-      </div>
+        <div className="footer_two">
+          <h1>Udemy</h1>
+          <p>&copy; Udemy, Inc</p>
+        </div>
       </div>
     </>
   );
