@@ -220,6 +220,12 @@ function App() {
           <p>&copy; Udemy, Inc</p>
         </div>
       </div>
+      <div className="animations">
+
+      </div>
+      <button className="button">
+        Press Me
+      </button>
     </>
   );
 }

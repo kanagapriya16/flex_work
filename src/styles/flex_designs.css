@@ -13,8 +13,13 @@ z-index: 1;
   gap: 10px;
   position: sticky;
   top: 0;
-  background-color:moccasin
+  background-color: rgba(229, 192, 242);
   
+}
+.navbar:hover{
+  transition-duration: 10s;
+  background-color: rgb(222, 71, 241);
+  transition-delay: 2s;
 }
 .navbar_s1_title {
   color: #be32f5;
@@ -87,6 +92,12 @@ display: none;
   color:aliceblue;
 
 }
+.categories p:hover{
+  transition: 1s;
+  background-color: transparent;
+  color: black;
+  border: solid black 1px;
+}
 .section_image img{
 width: 100%;
 }
@@ -104,7 +115,9 @@ width: 100%;
 
 }
 .course_card{
-  width: 300px;
+  flex-basis: 20%;
+  flex-grow: 1;
+  margin: 5px;
 }
 .course_card img{
   height: 50%;
@@ -163,13 +176,88 @@ margin: 20px;
   height: fit-content;
   position: absolute;
   top: 10%;
-  border: solid black 1px;
-  left: 5%;
+  border: solid black 3px;
+  left: 3%;
   padding: 20px;
-
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: zoom;
+  animation-duration: 1s;
 }
+
+@keyframes zoom {
+  0%{
+opacity: 0;
+transform: scale(0);
+  }
+  100%{
+opacity: 1;
+transform: scale(1);
+  }
+}
+
 .sale_image p{
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
+.animations{
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  animation-name: colorchange;
+  animation-duration: 2s;
+ 
+}
 
+
+@keyframes colorchange{
+  0%{
+  transform: scale(0);
+
+  }
+  
+  
+  100%{
+    transform: scale(1);
+  }
+}
+.button{
+  background-color: #be32f5;
+  color: black;
+  height: 25px;
+  width: 100px;
+  border-radius: 10px;
+  animation-name: buttonjump;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+@keyframes buttonjump{
+  0%{
+transform: translateY(0);
+  }
+  50%{
+transform: translateY(30px);
+  }
+  100%{
+ transform: translateY(0);
+  }
+}
+/* media queries */
+
+@media screen and (max-width:800px){
+  body{
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width:600px){
+  .course_card{
+    
+    flex-basis: 40%;
+  }
+ 
+
+}
